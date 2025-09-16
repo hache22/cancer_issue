@@ -1,0 +1,6 @@
+PatientID,Age,Gender,Race/Ethnicity,SmokingStatus,BMI,TumorSize,Stage,TreatmentType,SurvivalMonths,TreatmentResponse,Recurrence,GeneticMarker,HospitalRegion
+1,55,Female,Caucasian,Non-smoker,23.5,2.0,II,Chemotherapy,24,Complete,No,Negative,North
+2,62,Male,African American,Smoker,28.1,3.5,III,Surgery,18,Partial,Yes,Positive,South
+3,48,Female,Asian,Non-smoker,21.0,1.5,I,Radiation,36,Complete,No,Negative,West
+4,70,Male,Caucasian,Former smoker,30.2,4.0,IV,Chemotherapy,12,No Response,Yes,Positive,East
+5,95,Female,Hispanic,Non-smoker,25.5,2.8,II,Surgery,30,Partial,No,Negative,North

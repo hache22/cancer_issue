@@ -1,0 +1,79 @@
+2025-09-16 06:34:58,991 - [INFO] - --- Iniciando pipeline de análisis de clustering de cáncer ---
+2025-09-16 06:34:58,991 - [INFO] - --- 1. Iniciando Carga de Datos ---
+2025-09-16 06:34:58,992 - [INFO] - Cargando datos desde: C:\Users\Horacio\Desktop\proyectos\cancer_issue\data\raw\cancer_issue.csv
+2025-09-16 06:34:59,036 - [INFO] - Datos cargados exitosamente.
+2025-09-16 06:34:59,037 - [INFO] - Carga de datos completada.
+
+2025-09-16 06:34:59,037 - [INFO] - --- 2. Iniciando Preprocesamiento de Datos ---
+2025-09-16 06:34:59,037 - [INFO] - Ajustando el preprocesador de datos...
+2025-09-16 06:34:59,128 - [INFO] - Preprocesador ajustado exitosamente.
+2025-09-16 06:34:59,128 - [INFO] - Transformando datos...
+2025-09-16 06:34:59,195 - [INFO] - Datos transformados exitosamente.
+2025-09-16 06:34:59,198 - [INFO] - Preprocesamiento de datos completado.
+
+2025-09-16 06:34:59,198 - [INFO] - --- 3. Iniciando Entrenamiento de Modelos ---
+2025-09-16 06:34:59,198 - [INFO] - Aplicando PCA para retener 95.0% de la varianza...
+2025-09-16 06:37:01,852 - [INFO] - --- Iniciando pipeline de análisis de clustering de cáncer ---
+2025-09-16 06:37:01,852 - [INFO] - --- 1. Iniciando Carga de Datos ---
+2025-09-16 06:37:01,852 - [INFO] - Cargando datos desde: C:\Users\Horacio\Desktop\proyectos\cancer_issue\data\raw\cancer_issue.csv
+2025-09-16 06:37:01,884 - [INFO] - Datos cargados exitosamente.
+2025-09-16 06:37:01,885 - [INFO] - Carga de datos completada.
+
+2025-09-16 06:37:01,885 - [INFO] - --- 2. Iniciando Preprocesamiento de Datos ---
+2025-09-16 06:37:01,885 - [INFO] - Ajustando el preprocesador de datos...
+2025-09-16 06:37:01,969 - [INFO] - Preprocesador ajustado exitosamente.
+2025-09-16 06:37:01,970 - [INFO] - Transformando datos...
+2025-09-16 06:37:02,032 - [INFO] - Datos transformados exitosamente.
+2025-09-16 06:37:02,033 - [INFO] - Preprocesamiento de datos completado.
+
+2025-09-16 06:37:02,033 - [INFO] - --- 3. Iniciando Entrenamiento de Modelos ---
+2025-09-16 06:37:02,033 - [INFO] - Aplicando PCA para retener 95.0% de la varianza...
+2025-09-16 06:37:02,045 - [INFO] - PCA aplicado. Dimensiones reducidas a: 21
+2025-09-16 06:37:02,045 - [INFO] - Entrenando modelo KMeans...
+2025-09-16 06:37:06,518 - [INFO] - Entrenando modelo Agglomerative...
+2025-09-16 06:37:14,772 - [INFO] - Entrenando modelo GMM...
+2025-09-16 06:37:19,613 - [INFO] - Todos los modelos de clustering han sido entrenados.
+2025-09-16 06:37:19,613 - [INFO] - Entrenamiento de modelos completado.
+
+2025-09-16 06:37:19,613 - [INFO] - --- 4. Iniciando Evaluación de Modelos ---
+2025-09-16 06:37:19,613 - [INFO] - Iniciando evaluación de modelos de clustering.
+2025-09-16 06:37:27,096 - [INFO] - Evaluación de clusters completada.
+2025-09-16 06:37:27,096 - [INFO] - --- Resultados de KMeans ---
+2025-09-16 06:37:27,096 - [INFO] - Silhouette: 0.1002
+2025-09-16 06:37:27,096 - [INFO] - Calinski-Harabasz: 9887.2332
+2025-09-16 06:37:27,097 - [INFO] - Davies-Bouldin: 1.6231
+2025-09-16 06:37:27,097 - [INFO] - --- Resultados de Agglomerative ---
+2025-09-16 06:37:27,097 - [INFO] - Silhouette: 0.0962
+2025-09-16 06:37:27,097 - [INFO] - Calinski-Harabasz: 9369.7226
+2025-09-16 06:37:27,097 - [INFO] - Davies-Bouldin: 1.4307
+2025-09-16 06:37:27,098 - [INFO] - --- Resultados de GMM ---
+2025-09-16 06:37:27,098 - [INFO] - Silhouette: -0.0306
+2025-09-16 06:37:27,098 - [INFO] - Calinski-Harabasz: 3166.6869
+2025-09-16 06:37:27,098 - [INFO] - Davies-Bouldin: 3.9448
+2025-09-16 06:37:27,098 - [INFO] - Evaluación de modelos completada.
+
+2025-09-16 06:37:27,098 - [INFO] - Mejor modelo seleccionado: KMeans
+
+2025-09-16 06:37:27,098 - [INFO] - --- 5. Iniciando Interpretación para KMeans ---
+2025-09-16 06:37:27,098 - [INFO] - Creando perfiles de clusters...
+2025-09-16 06:37:27,117 - [INFO] - --- Perfiles de Clusters ---
+2025-09-16 06:37:27,121 - [INFO] - 
+                  Age    BMI  TumorSize  SurvivalMonths   TreatmentResponse Stage CancerType
+Cluster_KMeans                                                                              
+0               36.08  34.86       5.26           70.34         No Response    II      Colon
+1               53.72  28.78       6.75            2.58  Complete Remission   III      Colon
+2               49.96  29.00       8.33            1.00         No Response    II      Colon
+3               73.70  34.73       5.36           67.51         No Response   III       Skin
+4               49.70  30.09       6.84            1.48  Complete Remission    IV   Prostate
+5               52.75  24.16       5.24           69.29   Partial Remission     I       Skin
+6               53.30  28.90       6.76           15.35  Complete Remission    IV       Skin
+7               53.01  29.11       6.62            5.45         No Response     I   Prostate
+2025-09-16 06:37:28,494 - [INFO] - Gráfico guardado en: C:\Users\Horacio\Desktop\proyectos\cancer_issue\reports\figures\pca_clusters.png
+2025-09-16 06:37:28,591 - [INFO] - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-09-16 06:37:28,602 - [INFO] - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-09-16 06:37:28,696 - [INFO] - Gráfico guardado en: C:\Users\Horacio\Desktop\proyectos\cancer_issue\reports\figures\survivalmonths_distribution.png
+2025-09-16 06:37:28,968 - [INFO] - Gráfico guardado en: C:\Users\Horacio\Desktop\proyectos\cancer_issue\reports\figures\cancertype_categorical_distribution.png
+2025-09-16 06:37:29,169 - [INFO] - Gráfico guardado en: C:\Users\Horacio\Desktop\proyectos\cancer_issue\reports\figures\treatmentresponse_categorical_distribution.png
+2025-09-16 06:37:29,169 - [INFO] - Interpretación y visualización completadas.
+
+2025-09-16 06:37:29,170 - [INFO] - --- Pipeline completado exitosamente ---
